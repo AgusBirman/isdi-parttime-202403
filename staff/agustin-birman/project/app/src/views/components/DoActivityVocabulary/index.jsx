@@ -85,9 +85,9 @@ function DoActivityVocabulary() {
 
     return (<View>
         {currentExercises.map(exercise => {
-            return (<>
+            return (<View key={exercise.index}>
                 <Heading className='DoActVocabularyTitle' level='3'>{exercise.index + 1} Exercise</Heading>
-                <div className='DoActivityVocabulary' key={exercise.index}>
+                <div className='DoActivityVocabulary' >
                     <Heading className='VocabularyTitle' level='2'>{exercise.word}</Heading>
                     <Input className='VocabularyInput' onChange={(e) => { setAnswer(e.target.value) }} />
 
@@ -100,7 +100,7 @@ function DoActivityVocabulary() {
                     <Text>{message}</Text>
                 </div>
                 <Text>Page {currentPage} of {Math.ceil(exercises.length / pageSize)}</Text>
-            </>)
+            </View>)
         })}
     </View >
     )

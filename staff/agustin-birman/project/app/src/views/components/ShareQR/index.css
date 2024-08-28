@@ -1,5 +1,5 @@
 .QRContainer {
-    @apply mt-[25%] flex  flex-col items-center
+    @apply mt-[20%] flex  flex-col items-center p-[15px]
 }
 
 .QR {

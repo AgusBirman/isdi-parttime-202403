@@ -17,8 +17,6 @@ import ViewActivity from './components/ViewActivity'
 import ListExercises from './components/ListExercises'
 import DoActivity from './components/DoActivity'
 import ShowExerciseResults from './components/ShowExerciseResults'
-import ShareQR from './components/ShareQR'
-import AddStudent from './components/AddStudent'
 import ListStudents from './components/ListStudents'
 import ListTeachersActivities from './components/ListTeachersActivities'
 import ListTeachers from './components/ListTeachers'
@@ -27,6 +25,7 @@ import DoActivityOrderSentence from './components/DoActivityOrderSentence'
 import ViewStudentStats from './components/ViewStudentStats'
 import Vocabulary from './components/Vocabulary'
 import DoActivityVocabulary from './components/DoActivityVocabulary'
+import QR from './components/QR'
 
 function Home() {
     const [name, setName] = useState('')
@@ -83,8 +82,7 @@ function Home() {
                 <Route path='/activities/:activityId/do-activity/vocabulary' element={<DoActivityVocabulary></DoActivityVocabulary>} />
                 <Route path='/activities/:activityId/results' element={<ShowExerciseResults></ShowExerciseResults>} />
 
-                <Route path='/users/:userId' element={<ShareQR></ShareQR>} />
-                <Route path='/users/:userInfoId/add' element={<AddStudent></AddStudent>} />
+                <Route path='/users/:userId' element={<QR></QR>} />
                 <Route path='/users/students' element={<ListStudents></ListStudents>} />
                 <Route path='/users/student/:userId/info' element={<ViewStudentStats></ViewStudentStats>} />
                 <Route path='/users/teachers' element={<ListTeachers></ListTeachers>} />

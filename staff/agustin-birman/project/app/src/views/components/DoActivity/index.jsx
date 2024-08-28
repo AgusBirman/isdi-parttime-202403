@@ -96,9 +96,9 @@ function DoActivity() {
                 afterParentheses = matches[2].trim()
             }
 
-            return (<>
+            return (<View key={exercise.index} >
                 <Heading className='CompleteSenteneTitle' level='3'>{exercise.index + 1} Exercise</Heading>
-                <div className='DoActivityCompleteSentence' key={exercise.index}>
+                <div className='DoActivityCompleteSentence' >
                     <div className='CompleteSentenceContainer'>
                         <Text className='CompleteSentenceText'>{beforeParentheses}</Text>
                         <Input className='CompleteSentenceInput' onChange={(e) => { setAnswer(e.target.value) }} />
@@ -115,7 +115,7 @@ function DoActivity() {
 
                 </div>
                 <Text>Page {currentPage} of {Math.ceil(exercises.length / pageSize)}</Text>
-            </>)
+            </View>)
         })}
     </View >
     )

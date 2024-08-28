@@ -1,5 +1,5 @@
 .DoActOrderSentenceTitle{
-    @apply mt-[40%]
+    @apply mt-[30%]
 }
 .DoActOrderSentenceContainer{
     @apply flex flex-col items-center m-[7%] shadow-custom rounded-[20px] w-[95%] overflow-x-auto

@@ -128,7 +128,7 @@ function DoActivityOrderSentence() {
 
     return (<View >
         {currentExercises.map((exercise, index) => (
-            <>
+            <View key={exercise.id}>
                 <Heading level='3' className='DoActOrderSentenceTitle'>{exercise.index + 1} Exercise</Heading>
                 <div className='DoActOrderSentenceContainer'>
                     <Heading className='DoActOrderSentence' level='3'> {exercise.translate} </Heading>
@@ -164,7 +164,7 @@ function DoActivityOrderSentence() {
 
                 </ div>
                 <Text>Page {currentPage} of {Math.ceil(exercises.length / pageSize)}</Text>
-            </>
+            </View>
         ))}
     </ View>
     )

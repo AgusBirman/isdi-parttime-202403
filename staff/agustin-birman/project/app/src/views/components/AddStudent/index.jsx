@@ -7,9 +7,8 @@ import { Context } from '../../../useContext'
 import Button from '../../../components/core/Button'
 import './index.css'
 
-function AddStudent() {
+function AddStudent({ userId }) {
     const [userInfo, setUserInfo] = useState('')
-    const { userInfoId } = useParams()
     const navigate = useNavigate()
     const { alert } = useContext(Context)
 
@@ -19,7 +18,7 @@ function AddStudent() {
 
     const getUserInfo = () => {
         try {
-            logic.getUserInfo(userInfoId)
+            logic.getUserInfo(userId)
                 .then(user => setUserInfo(user))
                 .catch(error => {
                     console.error(error)
@@ -35,7 +34,7 @@ function AddStudent() {
 
     const handleAddStudent = () => {
         try {
-            logic.addStudent(userInfoId)
+            logic.addStudent(userId)
                 .then(() => navigate('/users/students'))
                 .catch(error => {
                     console.error(error)

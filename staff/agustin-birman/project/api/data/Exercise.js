@@ -31,7 +31,7 @@ const completeSentenceSchema = new Schema({
     }
 })
 
-const CompleteSentenceExercise = Exercise.discriminator('completeSentence', completeSentenceSchema);
+const CompleteSentenceExercise = Exercise.discriminator('completeSentence', completeSentenceSchema)
 
 const orderSentenceSchema = new Schema({
     sentence: {
@@ -44,7 +44,7 @@ const orderSentenceSchema = new Schema({
     }
 })
 
-const OrderSentenceExercise = Exercise.discriminator('orderSentence', orderSentenceSchema);
+const OrderSentenceExercise = Exercise.discriminator('orderSentence', orderSentenceSchema)
 
 const vocabularyExerciseSchema = new Schema({
     word: {
@@ -55,9 +55,9 @@ const vocabularyExerciseSchema = new Schema({
         type: [String],
         required: true
     }
-});
+})
 
-const VocabularyExercise = Exercise.discriminator('vocabulary', vocabularyExerciseSchema);
+const VocabularyExercise = Exercise.discriminator('vocabulary', vocabularyExerciseSchema)
 
 export {
     Exercise,
