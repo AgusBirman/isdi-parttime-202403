@@ -70,7 +70,6 @@ function ViewActivityTeacher() {
         }
     }
 
-
     const handleDeleteActivity = () => {
         try {
             logic.deleteActivity(activityId)

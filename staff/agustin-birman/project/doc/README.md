@@ -10,28 +10,28 @@ This is an innovative web application designed to enhance the educational experi
 
 Student 
 
--share id with teacher (view QR id) 
--list activities 
--view activity 
--submit exercise answer 
--delete progress 
--view stats
+- Share ID with teacher (view QR ID)
+- List activities
+- View activity
+- Submit exercise answer
+- Delete progress
+- View stats
 
 Teacher
 
--add student (scan QR id) 
--list students 
--list activities
--add activity 
--edit activity 
--delete activity 
--add exercise to activity 
--remove exercise from activity  
--edit exercise from activity 
+- Add student (scan QR ID)
+- List students
+- List activities
+- Add activity
+- Edit activity
+- Delete activity
+- Add exercise to activity
+- Remove exercise from activity
+- Edit exercise from activity
 
 ### UI Design
 
-[Figma](https://www.figma.com/design/FtmTtX9cZewWlv6yqsj4nu/demo-app?node-id=0-1&t=tNho9NZQl4l4RETJ-0)
+[Figma](https://www.figma.com/proto/vbDoKuXDsMhDnv7HAxdCP0/Untitled?node-id=0-1&t=0natvqji95DQWTBD-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A16&show-proto-sidebar=1)
 
 ## Technical
 
@@ -47,31 +47,31 @@ User
 - student: [User.id]
 
 Activity
--id (auto)
--teacher (User.id)
--title (string)
--description (string, optional)
+- id (auto)
+- teacher (User.id)
+- title (string)
+- description (string, optional)
 
 Exercise
--id (auto)
--activity (Activity.id)
--type:
+- id (auto)
+- activity (Activity.id)
+- type:
 
-    CompleteSentence
-    -sentence (string)
-    -answer (string)
+CompleteSentence
+- sentence (string)
+- answer (string)
     
-    OrderSentence
-    -sentence (string)
-    -translate (string)
+OrderSentence
+- sentence (string)
+- translate (string)
 
-    Vocabulary
-    -word (string)
-    -answer [string]
+Vocabulary
+- word (string)
+- answer [string]
 
 Answer
--id (auto)
--student (User.id)
--activity (Activity.id)
--exercise (Exercise.id)
--answer (string)
+- id (auto)
+- student (User.id)
+- activity (Activity.id)
+- exercise (Exercise.id)
+- answer (string)

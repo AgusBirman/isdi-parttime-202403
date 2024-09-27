@@ -34,4 +34,3 @@ function ViewActivity() {
 }
 
 export default ViewActivity
-
